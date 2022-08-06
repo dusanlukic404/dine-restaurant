@@ -1,0 +1,164 @@
+@use "../abstract/" as *;
+
+// Main container
+
+.container {
+  $max-width: rem(1100);
+  $padding: rem(35);
+
+  width: min($max-width, 100% - ($padding * 2));
+  margin-inline: auto;
+}
+
+// Hero section
+
+.logo {
+  width: rem(103);
+  height: rem(40);
+}
+
+.hero {
+  min-height: 115vh;
+  color: $clr-neutral-100;
+  font-weight: 300;
+  background-image: url("../../assets/homepage/hero-bg-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+  padding-top: rem(65);
+
+  &-container {
+    $max-width: rem(1200);
+    $padding: rem(25);
+
+    width: min($max-width, 100% - ($padding * 2));
+    margin-inline: auto;
+  }
+
+  h1 {
+    margin-top: rem(140);
+  }
+
+  p {
+    margin-top: rem(24);
+  }
+}
+
+// Reasons
+
+.reasons {
+  background-image: url("../../assets/patterns/pattern-curve-top-right.svg"),
+    url("../../assets/patterns/pattern-curve-top-left.svg");
+  background-position-y: 17.2rem, bottom;
+  background-position-x: left, right;
+  background-repeat: no-repeat;
+}
+
+.reason {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__text {
+    position: relative;
+    max-width: rem(445);
+  }
+}
+
+// Highlights
+
+.highlights {
+  padding-top: rem(80);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-flex {
+    display: flex;
+
+    & > * {
+      width: 100%;
+    }
+
+    .meal {
+      $meal-padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: rem(65);
+
+      &-img {
+        position: relative;
+        z-index: 10;
+      }
+
+      &:nth-child(even) {
+        padding-block: $meal-padding;
+        border-top: 1px solid $clr-neutral-300;
+        border-bottom: 1px solid $clr-neutral-300;
+      }
+
+      &:nth-child(odd) {
+        padding-block: $meal-padding;
+      }
+    }
+  }
+}
+
+// Gathering
+
+.gathering {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-image: url("../../assets/patterns/pattern-curve-top-right.svg");
+  background-position-y: top;
+  background-position-x: -20rem;
+  background-repeat: no-repeat;
+
+  &-flex {
+    padding-block: rem(150);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .gathering-img {
+      position: relative;
+      z-index: 10;
+
+      &::before {
+        position: absolute;
+        content: "";
+        background-image: url("../../assets/patterns/pattern-lines.svg");
+        background-repeat: no-repeat;
+        top: rem(-39);
+        left: rem(-39);
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+
+  .event-list {
+    margin-top: rem(80);
+  }
+}
+
+// Reservation
+
+.reservation {
+  padding-block: rem(100);
+  background-image: url("../../assets/homepage/ready-bg-desktop.jpg");
+  background-size: cover;
+}
+
+.reservation-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .btn {
+    margin-top: 0;
+  }
+}

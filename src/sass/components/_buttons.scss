@@ -1,0 +1,36 @@
+@use "../abstract/" as *;
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $clr-neutral-100;
+  background-color: transparent;
+  padding: em(15) em(44);
+  font-size: rem(18);
+  margin-top: rem(40);
+
+  letter-spacing: rem(2.5);
+  border: 1px solid $clr-neutral-100;
+
+  transition: $transition;
+
+  &:is(:hover, :focus-visible) {
+    background-color: $clr-neutral-100;
+    color: $clr-neutral-900;
+    border: 1px solid $clr-neutral-900;
+
+    outline: none;
+  }
+}
+
+.btn[data-type="inversed"] {
+  border: 1px solid $clr-primary-900;
+  background-color: $clr-primary-900;
+  color: $clr-neutral-100;
+
+  &:is(:hover, :focus-visible) {
+    background-color: transparent;
+    color: $clr-primary-900;
+  }
+}

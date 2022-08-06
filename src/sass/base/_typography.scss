@@ -1,0 +1,135 @@
+@use "../abstract/" as *;
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 400;
+  color: $clr-neutral-900;
+}
+
+.hero {
+  font-weight: 300;
+
+  h1 {
+    font-size: rem(78);
+    width: min(13ch, 100%);
+    line-height: 1;
+  }
+
+  p {
+    font-size: rem(24);
+    line-height: 1.225;
+    max-width: rem(460);
+  }
+}
+
+.reasons {
+  font-weight: 400;
+}
+
+h2 {
+  position: relative;
+  font-size: rem(48);
+  font-weight: 600;
+  line-height: 1.225;
+  width: min(13ch, 100%);
+  margin-bottom: rem(18);
+}
+
+h2:not(.gathering h2) {
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../../assets/patterns/pattern-divide.svg");
+    background-repeat: no-repeat;
+    top: rem(-45);
+    left: 0;
+    width: 70px;
+    height: 10px;
+  }
+}
+
+h3 {
+  position: relative;
+  font-size: rem(22);
+  font-weight: 600;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../../assets/patterns/pattern-divide.svg");
+    background-repeat: no-repeat;
+    top: 50%;
+    left: rem(-100);
+    transform: translateY(-50%);
+    width: 70px;
+    height: 10px;
+  }
+}
+
+p:not(.reservation-flex p) {
+  font-size: rem(22);
+  font-weight: 300;
+  line-height: 1.3;
+  max-width: 445px;
+}
+
+.meal p {
+  font-size: rem(18);
+  width: 100%;
+}
+
+.highlights {
+  color: $clr-neutral-100;
+}
+
+.event {
+  position: relative;
+  font-size: rem(18);
+  text-transform: uppercase;
+  line-height: 2;
+  color: $clr-neutral-200;
+  letter-spacing: 1.7px;
+
+  transition: $transition;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../../assets/patterns/pattern-lines.svg");
+    background-repeat: no-repeat;
+    top: 50%;
+    left: rem(-130);
+    transform: translateY(-50%);
+    width: 100px;
+    height: 1.5px;
+
+    transform: translateX(30px);
+    opacity: 0;
+
+    transition: $transition;
+  }
+}
+
+.event.event--active {
+  color: $clr-primary-900;
+}
+
+.event.event--active::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reservation-flex p {
+  color: $clr-neutral-100;
+  font-weight: 600;
+  font-size: rem(48);
+}
+
+footer {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contact {
+  max-width: rem(300);
+}

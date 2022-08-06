@@ -1,0 +1,30 @@
+@use "../abstract/" as *;
+
+.reason {
+  &__img img {
+    box-shadow: $card-shadow;
+  }
+
+  &:nth-of-type(1) .reason__img img {
+    transform: translateY(-70px);
+  }
+
+  &:nth-of-type(2) .reason__img img {
+    transform: translateY(70px);
+  }
+
+  &:nth-of-type(2) .reason__img {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../../assets/patterns/pattern-lines.svg");
+      background-repeat: no-repeat;
+      top: 50%;
+      right: rem(-100);
+      width: 150px;
+      height: 150px;
+    }
+  }
+}

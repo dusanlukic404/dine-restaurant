@@ -1,0 +1,19 @@
+$clr-neutral-100: hsl(0, 0%, 100%); // white text and section backgrounds
+$clr-neutral-200: hsl(217, 14%, 42%);
+$clr-neutral-300: hsl(218, 21%, 18%);
+$clr-neutral-900: hsl(234, 30%, 13%); // black text
+
+$clr-primary-100: hsl(27, 22%, 51%); // details
+$clr-primary-700: hsl(0, 0%, 30%); // 3 card heading color
+$clr-primary-900: hsl(0, 0%, 7%); // only backgrounds in hero and footer
+
+$clr-accent-400: hsl(0, 43%, 50%); // errors
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+
+$transition: 300ms ease-in-out;
+
+$card-shadow: 0 7.5rem 10rem -5rem hsla(219, 21%, 28%, 0.5);

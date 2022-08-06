@@ -1,0 +1,8 @@
+@use "../abstract/" as *;
+
+.hero,
+.highlights,
+.footer {
+  background-color: $clr-primary-900;
+  color: $clr-neutral-100;
+}

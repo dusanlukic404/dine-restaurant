@@ -4,9 +4,188 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dine restaurant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor - Dine Website Challenge</title>
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/script.js"></script>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-container">
+          <svg class="logo" id="logo">
+            <use xlink:href="./assets/logo.svg#logo"></use>
+          </svg>
+          <h1>Exquisite dining since 1989</h1>
+          <p>
+            Experience our seasonal menu in beautiful country surroundings. Eat
+            the freshest produce from the comfort of our farmhouse.
+          </p>
+          <!-- goes to booking.html -->
+          <a class="btn" href="#">Book a table</a>
+        </div>
+      </section>
+
+      <section class="reasons" id="reasons">
+        <div class="container">
+          <div class="reason">
+            <div class="reason__img">
+              <img
+                src="./assets/homepage/enjoyable-place-desktop.jpg"
+                alt="Enjoyable place"
+              />
+            </div>
+            <div class="reason__text">
+              <h2>Enjoyable place for all the family</h2>
+              <p>
+                Our relaxed surroundings make dining with us a great experience
+                for everyone. We can even arrange a tour of the farm before your
+                meal.
+              </p>
+            </div>
+          </div>
+          <div class="reason">
+            <div class="reason__text">
+              <h2>The most locally sourced food</h2>
+              <p>
+                All our ingredients come directly from our farm or local
+                fishery. So you can be sure that you're eating the freshest,
+                most sustainable food.
+              </p>
+            </div>
+            <div class="reason__img">
+              <img
+                src="./assets/homepage/locally-sourced-desktop.jpg"
+                alt="The most locally sourced food"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="highlights" id="highlights">
+        <div class="container">
+          <div class="highlights-flex">
+            <div class="highlights-text">
+              <h2>A few highlights from our menu</h2>
+              <p>
+                We cater for all dietary requirements, but here's a glimpse at
+                some of our diner's favourites. Our menu is revamped every
+                season.
+              </p>
+            </div>
+            <div class="highlights-meals">
+              <ul aria-label="List of best meals" role="list" class="meal-list">
+                <li class="meal">
+                  <div class="meal-img">
+                    <img
+                      src="./assets/homepage/salmon-desktop-tablet@2x.jpg"
+                      alt="Salmon Fillet"
+                    />
+                  </div>
+                  <div class="meal-text">
+                    <h3>Seared Salmon Fillet</h3>
+                    <p>
+                      Our locally sourced salmon served with a refreshing
+                      buckwheat summer salad.
+                    </p>
+                  </div>
+                </li>
+                <li class="meal">
+                  <div class="meal-img">
+                    <img
+                      src="./assets/homepage/beef-desktop-tablet@2x.jpg"
+                      alt="Filet Mignon"
+                    />
+                  </div>
+                  <div class="meal-text">
+                    <h3>Rosemary Filet Mignon</h3>
+                    <p>
+                      Our prime beef served to your taste with a delicious
+                      choice of seasonal sides.
+                    </p>
+                  </div>
+                </li>
+                <li class="meal">
+                  <div class="meal-img">
+                    <img
+                      src="./assets/homepage/chocolate-desktop-tablet@2x.jpg"
+                      alt="Chocolate Mousse"
+                    />
+                  </div>
+                  <div class="meal-text">
+                    <h3>Summer Fruit Chocolate Mousse</h3>
+                    <p>
+                      Creamy mousse combined with summer fruits and dark
+                      chocolate shavings.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gathering" id="gathering">
+        <div class="container">
+          <div class="gathering-flex">
+            <div class="gathering-img">
+              <img
+                src="./assets/homepage/family-gathering-desktop.jpg"
+                alt="Family gathering"
+              />
+            </div>
+            <div class="gathering-text">
+              <h2>Family gathering</h2>
+              <p>
+                We love catering for entire families. So please bring everyone
+                along for a special meal with your loved ones. We'll provide a
+                memorable experience for all.
+              </p>
+              <a href="#" class="btn" data-type="inversed">Book a table</a>
+              <ul role="list" class="event-list">
+                <li class="event event--active">Family gathering</li>
+                <li class="event">Special events</li>
+                <li class="event">Social events</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="reservation" id="reservation">
+        <div class="container">
+          <div class="reservation-flex">
+            <p>Ready to make a reservation?</p>
+            <a href="#" class="btn">Book a table</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-flex">
+            <svg class="logo" id="logo">
+              <use xlink:href="./assets/logo.svg#logo"></use>
+            </svg>
+            <div class="contact">
+              <p>Marthwaite, Sedbergh Cumbria</p>
+              <p>+00 44 123 4567</p>
+            </div>
+            <div class="worktime">
+              <p>Open times</p>
+              <p>Mon - Fri: 09:00 AM - 10:00 PM</p>
+              <p>Sat - Sun: 09:00 AM - 11:30 PM</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
 </html>
