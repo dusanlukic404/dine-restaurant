@@ -17,16 +17,34 @@
   height: rem(40);
 }
 
+.hero-text,
+.booking-flex {
+  margin-top: rem(140);
+}
+
+.hero-text,
+.booking-text {
+  transform: translateY(100px);
+  opacity: 0;
+
+  animation: slide-up 1000ms ease-out forwards;
+
+  p {
+    margin-top: rem(24);
+  }
+}
+
+.hero,
+.booking {
+  padding-top: rem(65);
+}
+
 .hero {
   min-height: 115vh;
-  color: $clr-neutral-100;
-  font-weight: 300;
   background-image: url("../../assets/homepage/hero-bg-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-
-  padding-top: rem(65);
 
   &-container {
     $max-width: rem(1200);
@@ -34,14 +52,6 @@
 
     width: min($max-width, 100% - ($padding * 2));
     margin-inline: auto;
-  }
-
-  h1 {
-    margin-top: rem(140);
-  }
-
-  p {
-    margin-top: rem(24);
   }
 }
 
@@ -87,6 +97,16 @@
       display: flex;
       align-items: center;
       gap: rem(65);
+
+      transform: translateX(100px);
+      opacity: 0;
+
+      transition: $img-transition;
+
+      &.meal--active {
+        transform: translateX(0);
+        opacity: 1;
+      }
 
       &-img {
         position: relative;
@@ -160,5 +180,97 @@
 
   .btn {
     margin-top: 0;
+  }
+}
+
+// Booking page - booking section
+
+.booking {
+  height: 85vh;
+  background-image: url("../../assets/booking/hero-bg-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+// Booking card
+
+.form-card {
+  $input-padding: rem(13);
+  position: relative;
+  z-index: 10;
+  background-color: $clr-neutral-100;
+  padding: rem(50);
+  width: min(rem(520), 100%);
+  box-shadow: $card-shadow;
+
+  transform: translateY(-100px);
+  opacity: 0;
+
+  animation: slide-down 1000ms ease-out forwards 500ms;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../assets/patterns/pattern-lines.svg");
+    background-repeat: no-repeat;
+    bottom: rem(-110);
+    left: rem(-70);
+    width: 150px;
+    height: 150px;
+  }
+
+  input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba($clr-primary-900, 0.2);
+    cursor: pointer;
+    outline: none;
+
+    transition: $transition;
+
+    &:focus-visible {
+      border-bottom: 1px solid rgba($clr-primary-900, 1);
+    }
+
+    &#name,
+    &#email {
+      padding: 0 0 $input-padding $input-padding;
+    }
+  }
+
+  div + div,
+  button {
+    margin-top: rem(20);
+  }
+
+  .date-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .date-box {
+      display: flex;
+      gap: rem(20);
+      align-items: center;
+
+      input {
+        width: rem(80);
+        text-align: center;
+        padding-bottom: $input-padding;
+      }
+    }
+  }
+
+  .person-number-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $input-padding $input-padding $input-padding;
+    border-bottom: 1px solid $clr-primary-900;
   }
 }

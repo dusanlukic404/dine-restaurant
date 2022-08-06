@@ -6,11 +6,25 @@
   }
 
   &:nth-of-type(1) .reason__img img {
-    transform: translateY(-70px);
+    opacity: 0;
+
+    transition: $img-transition;
+
+    &.slide-up {
+      opacity: 1;
+      transform: translateY(-70px);
+    }
   }
 
   &:nth-of-type(2) .reason__img img {
-    transform: translateY(70px);
+    opacity: 0;
+
+    transition: $img-transition;
+
+    &.slide-down {
+      opacity: 1;
+      transform: translateY(70px);
+    }
   }
 
   &:nth-of-type(2) .reason__img {

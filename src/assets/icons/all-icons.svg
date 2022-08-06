@@ -1,0 +1,14 @@
+<svg width="0" height="0" class="hidden">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 11" id="icon-arrow">
+    <path fill="none" stroke="#9E7F66" stroke-width="2" d="M1 1l8 8 8-8"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11" id="icon-check">
+    <path fill="none" stroke="#9E7F66" stroke-width="2" d="M1 5.897l2.767 2.767L11.432 1"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 3" id="icon-minus">
+    <path fill="#9E7F66" d="M6.425 2.977V.601H.629v2.376z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 11" id="icon-plus">
+    <path fill="#9E7F66" d="M6.227 10.156V6.727h3.429V4.342H6.227V.913H3.842v3.429H.413v2.385h3.429v3.429z"></path>
+  </symbol>
+</svg>

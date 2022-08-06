@@ -1,0 +1,7 @@
+@use "../abstract/" as *;
+
+.decoration {
+  height: rem(320);
+  background-repeat: no-repeat;
+  background-image: url("../../assets/patterns/pattern-curve-bottom-right.svg");
+}

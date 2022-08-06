@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dine Website - Booking</title>
+    <link rel="shortcut icon" href="./assets/favicon-32x32.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" type="module"></script>
+  </head>
+  <body>
+    <main>
+      <section class="booking" id="booking">
+        <div class="container">
+          <a href="index.html">
+            <svg class="logo" id="logo">
+              <use xlink:href="./assets/logo.svg#logo"></use>
+            </svg>
+          </a>
+          <div class="booking-flex">
+            <div class="booking-text">
+              <h1>Reservations</h1>
+              <p>
+                We can't wait to host you. If you have any special requirements
+                please feel free to call on the phone number below. We'll be
+                happy to accommodate you.
+              </p>
+            </div>
+            <div class="form-card">
+              <form aria-label="Reservation form" action="#">
+                <div>
+                  <input
+                    aria-label="Enter your name"
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Name"
+                  />
+                </div>
+                <div>
+                  <input
+                    aria-label="Enter email"
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="date date-time">
+                  <p>Pick a date</p>
+                  <div class="date-box">
+                    <input
+                      aria-label="month"
+                      type="text"
+                      placeholder="MM"
+                      maxlength="2"
+                      name="month"
+                    />
+                    <input
+                      aria-label="day"
+                      type="text"
+                      placeholder="DD"
+                      maxlength="2"
+                      name="day"
+                    />
+                    <input
+                      aria-label="year"
+                      type="text"
+                      placeholder="YYYY"
+                      maxlength="4"
+                      name="year"
+                    />
+                  </div>
+                </div>
+                <div class="date date-time">
+                  <p>Pick a time</p>
+                  <div class="date-box">
+                    <input
+                      aria-label="hour"
+                      type="text"
+                      placeholder="09"
+                      maxlength="2"
+                      name="hour"
+                    />
+                    <input
+                      aria-label="minutes"
+                      type="text"
+                      placeholder="00"
+                      maxlength="2"
+                      name="minutes"
+                    />
+                    <input
+                      aria-label="year"
+                      type="text"
+                      placeholder="YYYY"
+                      maxlength="4"
+                      name="year"
+                    />
+                  </div>
+                </div>
+                <div class="person-number-box">
+                  <button aria-label="decrease">
+                    <svg class="icon">
+                      <use
+                        xlink:href="./assets/icons/all-icons.svg#icon-minus"
+                      ></use>
+                    </svg>
+                  </button>
+                  <p><span class="number">4</span> people</p>
+                  <button aria-label="increase">
+                    <svg class="icon">
+                      <use
+                        xlink:href="./assets/icons/all-icons.svg#icon-plus"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
+                <button class="btn-booking">Make reservation</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="decoration"></div>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-flex">
+            <svg class="logo" id="logo">
+              <use xlink:href="./assets/logo.svg#logo"></use>
+            </svg>
+            <div class="contact">
+              <p>Marthwaite, Sedbergh Cumbria</p>
+              <p>+00 44 123 4567</p>
+            </div>
+            <div class="worktime">
+              <p>Open times</p>
+              <p>Mon - Fri: 09:00 AM - 10:00 PM</p>
+              <p>Sat - Sun: 09:00 AM - 11:30 PM</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

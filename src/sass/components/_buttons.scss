@@ -1,17 +1,16 @@
 @use "../abstract/" as *;
 
-.btn {
+%btn {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
-  color: $clr-neutral-100;
-  background-color: transparent;
   padding: em(15) em(44);
   font-size: rem(18);
-  margin-top: rem(40);
-
   letter-spacing: rem(2.5);
+
   border: 1px solid $clr-neutral-100;
+  color: $clr-neutral-100;
+  background-color: transparent;
 
   transition: $transition;
 
@@ -24,7 +23,7 @@
   }
 }
 
-.btn[data-type="inversed"] {
+%btn-inverse {
   border: 1px solid $clr-primary-900;
   background-color: $clr-primary-900;
   color: $clr-neutral-100;
@@ -33,4 +32,36 @@
     background-color: transparent;
     color: $clr-primary-900;
   }
+}
+
+.btn {
+  @extend %btn;
+  margin-top: rem(40);
+}
+
+.control-number-people {
+  width: rem(15);
+  height: rem(15);
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 1px solid $clr-primary-900;
+    outline-offset: 10px;
+  }
+
+  .icon {
+    width: rem(15);
+    height: rem(15);
+  }
+}
+
+.btn-booking {
+  @extend %btn;
+  @extend %btn-inverse;
+  width: 100%;
 }

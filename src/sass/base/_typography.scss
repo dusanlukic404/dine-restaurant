@@ -6,20 +6,36 @@ body {
   color: $clr-neutral-900;
 }
 
-.hero {
+.hero,
+.booking {
   font-weight: 300;
-
-  h1 {
-    font-size: rem(78);
-    width: min(13ch, 100%);
-    line-height: 1;
-  }
+  color: $clr-neutral-100;
 
   p {
     font-size: rem(24);
     line-height: 1.225;
     max-width: rem(460);
   }
+}
+
+.form-card {
+  font-size: rem(24);
+  line-height: 1.225;
+  color: $clr-primary-900;
+
+  input {
+    color: $clr-neutral-200;
+
+    &:focus-visible {
+      color: $clr-neutral-900;
+    }
+  }
+}
+
+h1 {
+  font-size: rem(78);
+  width: min(13ch, 100%);
+  line-height: 1;
 }
 
 h2 {
@@ -131,4 +147,8 @@ footer {
 
 .contact {
   max-width: rem(250);
+}
+
+.person-number-box p {
+  font-weight: 600;
 }

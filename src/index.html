@@ -10,9 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Frontend Mentor - Dine Website Challenge</title>
+    <title>Dine Website - Homepage</title>
+    <link rel="shortcut icon" href="./assets/favicon-32x32.png" />
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" type="module"></script>
   </head>
   <body>
     <main>
@@ -21,13 +22,15 @@
           <svg class="logo" id="logo">
             <use xlink:href="./assets/logo.svg#logo"></use>
           </svg>
-          <h1>Exquisite dining since 1989</h1>
-          <p>
-            Experience our seasonal menu in beautiful country surroundings. Eat
-            the freshest produce from the comfort of our farmhouse.
-          </p>
-          <!-- goes to booking.html -->
-          <a class="btn" href="#">Book a table</a>
+          <div class="hero-text">
+            <h1>Exquisite dining since 1989</h1>
+            <p>
+              Experience our seasonal menu in beautiful country surroundings.
+              Eat the freshest produce from the comfort of our farmhouse.
+            </p>
+            <!-- goes to booking.html -->
+            <a class="btn" href="booking.html">Book a table</a>
+          </div>
         </div>
       </section>
 
@@ -148,7 +151,9 @@
                 along for a special meal with your loved ones. We'll provide a
                 memorable experience for all.
               </p>
-              <a href="#" class="btn" data-type="inversed">Book a table</a>
+              <a href="booking.html" class="btn" data-type="inversed"
+                >Book a table</a
+              >
               <ul role="list" class="event-list">
                 <li class="event event--active">Family gathering</li>
                 <li class="event">Special events</li>
@@ -163,7 +168,7 @@
         <div class="container">
           <div class="reservation-flex">
             <p>Ready to make a reservation?</p>
-            <a href="#" class="btn">Book a table</a>
+            <a href="booking.html" class="btn">Book a table</a>
           </div>
         </div>
       </section>
