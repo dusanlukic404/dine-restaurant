@@ -90,10 +90,6 @@ body {
   max-width: 28.75rem;
 }
 
-.reasons {
-  font-weight: 400;
-}
-
 h2 {
   position: relative;
   font-size: 3rem;
@@ -131,10 +127,13 @@ h3::before {
   height: 10px;
 }
 
-p:not(.reservation-flex p) {
-  font-size: 1.375rem;
+p {
   font-weight: 300;
   line-height: 1.3;
+}
+
+p:not(.reservation-flex p, .footer p) {
+  font-size: 1.375rem;
   max-width: 445px;
 }
 
@@ -192,7 +191,7 @@ footer {
 }
 
 .contact {
-  max-width: 18.75rem;
+  max-width: 15.625rem;
 }
 
 .btn {
