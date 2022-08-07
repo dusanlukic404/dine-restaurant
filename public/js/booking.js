@@ -65,7 +65,8 @@ minusBtn.addEventListener("click", function (e) {
 const makeReservationBtn = document.querySelector(".btn-booking");
 const inputs = document.querySelectorAll('input:not([type="email"])');
 const emailInput = document.querySelector('input[type="email"]');
-const numberInputs = document.querySelectorAll('input[maxlength="2"]');
+const [monthInput, dayInput, yearInput, hoursInput, minutesInput] =
+  document.querySelectorAll("input[maxlength]");
 const allInputs = document.querySelectorAll("input");
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -75,6 +76,22 @@ function checkIputs(inputs) {
       input.classList.add("input--error");
     }
   });
+
+  const date = new Date();
+
+  if (yearInput.value < date.getFullYear()) {
+    yearInput.classList.add("input--error");
+  } else if (yearInput.value == date.getFullYear()) {
+    (monthInput.value < date.getMonth() + 1 ||
+      monthInput.value < 1 ||
+      monthInput.value > 12) &&
+      monthInput.classList.add("input--error");
+
+    (dayInput.value < date.getDate() ||
+      dayInput.value < 1 ||
+      dayInput.value > 31) &&
+      dayInput.classList.add("input--error");
+  }
 }
 
 const validateEmail = (email) => {
@@ -103,7 +120,7 @@ makeReservationBtn.addEventListener("click", function (e) {
 });
 
 allInputs.forEach((input) => {
-  input.addEventListener("change", function () {
+  input.addEventListener("input", function () {
     this.classList.remove("input--error");
   });
 });
