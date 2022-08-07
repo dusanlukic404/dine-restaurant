@@ -13,6 +13,7 @@
     <title>Dine Website - Booking</title>
     <link rel="shortcut icon" href="./assets/favicon-32x32.png" />
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/booking.js" defer></script>
   </head>
   <body>
     <main>
@@ -33,7 +34,7 @@
               </p>
             </div>
             <div class="form-card">
-              <form aria-label="Reservation form" action="#">
+              <form aria-label="Reservation form" action="#" novalidate>
                 <div>
                   <input
                     aria-label="Enter your name"
@@ -110,7 +111,10 @@
                         aria-label="time periods"
                       >
                         <li class="time-period time-period--active">
-                          <svg class="icon" id="icon">
+                          <svg
+                            class="icon icon-check icon-check--active"
+                            id="icon"
+                          >
                             <use
                               xlink:href="./assets/icons/all-icons.svg#icon-check"
                             ></use>
@@ -118,7 +122,7 @@
                           <span>AM</span>
                         </li>
                         <li class="time-period">
-                          <svg class="icon" id="icon">
+                          <svg class="icon icon-check" id="icon">
                             <use
                               xlink:href="./assets/icons/all-icons.svg#icon-check"
                             ></use></svg
@@ -129,7 +133,7 @@
                   </div>
                 </div>
                 <div class="person-number-box">
-                  <button aria-label="decrease">
+                  <button type="button" class="btn-minus" aria-label="decrease">
                     <svg class="icon">
                       <use
                         xlink:href="./assets/icons/all-icons.svg#icon-minus"
@@ -140,7 +144,7 @@
                     <span class="number">4</span>
                     <span class="people-span">people</span>
                   </p>
-                  <button aria-label="increase">
+                  <button class="btn-plus" aria-label="increase">
                     <svg class="icon">
                       <use
                         xlink:href="./assets/icons/all-icons.svg#icon-plus"
@@ -148,7 +152,9 @@
                     </svg>
                   </button>
                 </div>
-                <button class="btn-booking">Make reservation</button>
+                <button type="button" class="btn-booking">
+                  Make reservation
+                </button>
               </form>
             </div>
           </div>

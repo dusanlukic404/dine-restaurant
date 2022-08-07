@@ -41,6 +41,12 @@
     &#email {
       padding: 0 0 $input-padding $input-padding;
     }
+
+    &.input--error {
+      animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+      border-bottom: 1px solid $clr-accent-400;
+      color: $clr-accent-400;
+    }
   }
 
   div + div,
@@ -86,6 +92,7 @@
       background-color: $clr-neutral-100;
       color: rgba($clr-neutral-200, 0.6);
       box-shadow: 0 10px 20px rgba($clr-neutral-200, 0.4);
+      pointer-events: none;
 
       transform: translateY(-50px);
       opacity: 0;
@@ -93,6 +100,7 @@
       transition: $transition;
 
       &--active {
+        pointer-events: auto;
         transform: translateY(0);
         opacity: 1;
       }
@@ -110,7 +118,7 @@
           color: $clr-neutral-900;
         }
 
-        svg {
+        .icon-check {
           opacity: 0;
           transition: $transition;
         }
@@ -118,7 +126,7 @@
         &--active {
           color: $clr-neutral-900;
 
-          & svg {
+          & .icon-check {
             opacity: 1;
           }
         }

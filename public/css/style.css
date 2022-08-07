@@ -10,6 +10,20 @@
     transform: translateY(0);
   }
 }
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
 /* Box sizing rules */
 html {
   box-sizing: border-box;
@@ -123,6 +137,9 @@ body {
 }
 .form-card .period.period--active {
   color: hsl(234deg, 30%, 13%);
+  opacity: 1;
+}
+.form-card .period.period--active svg {
   opacity: 1;
 }
 
@@ -524,6 +541,12 @@ button:focus-visible {
 .form-card .select#email {
   padding: 0 0 0.8125rem 0.8125rem;
 }
+.form-card input.input--error,
+.form-card .select.input--error {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  border-bottom: 1px solid hsl(0deg, 43%, 50%);
+  color: hsl(0deg, 43%, 50%);
+}
 .form-card div + div,
 .form-card button {
   margin-top: 1.25rem;
@@ -561,11 +584,13 @@ button:focus-visible {
   background-color: hsl(0deg, 0%, 100%);
   color: rgba(92, 104, 122, 0.6);
   box-shadow: 0 10px 20px rgba(92, 104, 122, 0.4);
+  pointer-events: none;
   transform: translateY(-50px);
   opacity: 0;
   transition: 300ms ease-in-out;
 }
 .form-card .select-dropdown .dropdown--active {
+  pointer-events: auto;
   transform: translateY(0);
   opacity: 1;
 }
@@ -580,14 +605,14 @@ button:focus-visible {
 .form-card .select-dropdown .dropdown .time-period:hover {
   color: hsl(234deg, 30%, 13%);
 }
-.form-card .select-dropdown .dropdown .time-period svg {
+.form-card .select-dropdown .dropdown .time-period .icon-check {
   opacity: 0;
   transition: 300ms ease-in-out;
 }
 .form-card .select-dropdown .dropdown .time-period--active {
   color: hsl(234deg, 30%, 13%);
 }
-.form-card .select-dropdown .dropdown .time-period--active svg {
+.form-card .select-dropdown .dropdown .time-period--active .icon-check {
   opacity: 1;
 }
 .form-card .select {
