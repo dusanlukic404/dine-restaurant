@@ -145,7 +145,6 @@
 
     .gathering-img {
       position: relative;
-      z-index: 10;
 
       &::before {
         position: absolute;
@@ -186,7 +185,7 @@
 // Booking page - booking section
 
 .booking {
-  height: 85vh;
+  height: rem(600);
   background-image: url("../../assets/booking/hero-bg-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;

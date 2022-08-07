@@ -23,11 +23,21 @@ body {
   line-height: 1.225;
   color: $clr-primary-900;
 
-  input {
+  input,
+  .select {
     color: $clr-neutral-200;
 
     &:focus-visible {
       color: $clr-neutral-900;
+    }
+  }
+
+  .period {
+    opacity: 0.6;
+
+    &.period--active {
+      color: $clr-neutral-900;
+      opacity: 1;
     }
   }
 }

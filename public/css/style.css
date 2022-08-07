@@ -110,11 +110,20 @@ body {
   line-height: 1.225;
   color: hsl(0deg, 0%, 7%);
 }
-.form-card input {
+.form-card input,
+.form-card .select {
   color: hsl(217deg, 14%, 42%);
 }
-.form-card input:focus-visible {
+.form-card input:focus-visible,
+.form-card .select:focus-visible {
   color: hsl(234deg, 30%, 13%);
+}
+.form-card .period {
+  opacity: 0.6;
+}
+.form-card .period.period--active {
+  color: hsl(234deg, 30%, 13%);
+  opacity: 1;
 }
 
 h1 {
@@ -278,7 +287,8 @@ button:focus-visible {
   outline: 1px solid hsl(0deg, 0%, 7%);
   outline-offset: 10px;
 }
-button .icon {
+
+.icon {
   width: 0.9375rem;
   height: 0.9375rem;
 }
@@ -435,7 +445,6 @@ button .icon {
 }
 .gathering-flex .gathering-img {
   position: relative;
-  z-index: 10;
 }
 .gathering-flex .gathering-img::before {
   position: absolute;
@@ -467,7 +476,7 @@ button .icon {
 }
 
 .booking {
-  height: 85vh;
+  height: 37.5rem;
   background-image: url("../../assets/booking/hero-bg-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -492,12 +501,13 @@ button .icon {
   content: "";
   background-image: url("../../assets/patterns/pattern-lines.svg");
   background-repeat: no-repeat;
-  width: 150px;
+  width: 160px;
   height: 76px;
   bottom: -2.4375rem;
-  left: -4.3125rem;
+  left: -4.9375rem;
 }
-.form-card input {
+.form-card input,
+.form-card .select {
   width: 100%;
   border: none;
   border-bottom: 1px solid rgba(18, 18, 18, 0.2);
@@ -505,10 +515,13 @@ button .icon {
   outline: none;
   transition: 300ms ease-in-out;
 }
-.form-card input:focus-visible {
+.form-card input:focus-visible,
+.form-card .select:focus-visible {
   border-bottom: 1px solid #121212;
 }
-.form-card input#name, .form-card input#email {
+.form-card input#name, .form-card input#email,
+.form-card .select#name,
+.form-card .select#email {
   padding: 0 0 0.8125rem 0.8125rem;
 }
 .form-card div + div,
@@ -525,10 +538,66 @@ button .icon {
   gap: 1.25rem;
   align-items: center;
 }
-.form-card .date-time .date-box input {
+.form-card .date-time .date-box input,
+.form-card .date-time .date-box .select {
   width: 5rem;
   text-align: center;
   padding-bottom: 0.8125rem;
+}
+.form-card .select-dropdown {
+  position: relative;
+}
+.form-card .select-dropdown .icon-arrow {
+  transition: 300ms ease-in-out;
+}
+.form-card .select-dropdown .icon-arrow--active {
+  transform: rotate(180deg);
+}
+.form-card .select-dropdown .dropdown {
+  position: absolute;
+  bottom: -200%;
+  left: 0;
+  width: 100%;
+  background-color: hsl(0deg, 0%, 100%);
+  color: rgba(92, 104, 122, 0.6);
+  box-shadow: 0 10px 20px rgba(92, 104, 122, 0.4);
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: 300ms ease-in-out;
+}
+.form-card .select-dropdown .dropdown--active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.form-card .select-dropdown .dropdown .time-period {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.1875em 0.3125em;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+.form-card .select-dropdown .dropdown .time-period:hover {
+  color: hsl(234deg, 30%, 13%);
+}
+.form-card .select-dropdown .dropdown .time-period svg {
+  opacity: 0;
+  transition: 300ms ease-in-out;
+}
+.form-card .select-dropdown .dropdown .time-period--active {
+  color: hsl(234deg, 30%, 13%);
+}
+.form-card .select-dropdown .dropdown .time-period--active svg {
+  opacity: 1;
+}
+.form-card .select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+}
+.form-card .select .period {
+  text-transform: uppercase;
 }
 .form-card .person-number-box {
   display: flex;

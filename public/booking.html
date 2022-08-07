@@ -13,7 +13,6 @@
     <title>Dine Website - Booking</title>
     <link rel="shortcut icon" href="./assets/favicon-32x32.png" />
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/script.js" type="module"></script>
   </head>
   <body>
     <main>
@@ -96,13 +95,37 @@
                       maxlength="2"
                       name="minutes"
                     />
-                    <input
-                      aria-label="year"
-                      type="text"
-                      placeholder="YYYY"
-                      maxlength="4"
-                      name="year"
-                    />
+                    <div class="select-dropdown">
+                      <div class="select">
+                        <p class="period">am</p>
+                        <svg class="icon icon-arrow" id="icon">
+                          <use
+                            xlink:href="./assets/icons/all-icons.svg#icon-arrow"
+                          ></use>
+                        </svg>
+                      </div>
+                      <ul
+                        class="dropdown"
+                        role="list"
+                        aria-label="time periods"
+                      >
+                        <li class="time-period time-period--active">
+                          <svg class="icon" id="icon">
+                            <use
+                              xlink:href="./assets/icons/all-icons.svg#icon-check"
+                            ></use>
+                          </svg>
+                          <span>AM</span>
+                        </li>
+                        <li class="time-period">
+                          <svg class="icon" id="icon">
+                            <use
+                              xlink:href="./assets/icons/all-icons.svg#icon-check"
+                            ></use></svg
+                          ><span>PM</span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
                 <div class="person-number-box">
@@ -113,7 +136,10 @@
                       ></use>
                     </svg>
                   </button>
-                  <p><span class="number">4</span> people</p>
+                  <p>
+                    <span class="number">4</span>
+                    <span class="people-span">people</span>
+                  </p>
                   <button aria-label="increase">
                     <svg class="icon">
                       <use
