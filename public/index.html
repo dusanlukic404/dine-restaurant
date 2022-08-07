@@ -17,13 +17,13 @@
   </head>
   <body>
     <main>
-      <section class="hero" id="hero">
+      <section class="hero" id="hero" aria-labelledby="hero-heading">
         <div class="hero-container">
           <svg class="logo" id="logo">
             <use xlink:href="./assets/logo.svg#logo"></use>
           </svg>
           <div class="hero-text">
-            <h1>Exquisite dining since 1989</h1>
+            <h1 id="hero-heading">Exquisite dining since 1989</h1>
             <p>
               Experience our seasonal menu in beautiful country surroundings.
               Eat the freshest produce from the comfort of our farmhouse.
@@ -34,7 +34,7 @@
         </div>
       </section>
 
-      <section class="reasons" id="reasons">
+      <section class="reasons" id="reasons" aria-label="Reasons to visit us">
         <div class="container">
           <div class="reason">
             <div class="reason__img">
@@ -71,11 +71,15 @@
         </div>
       </section>
 
-      <section class="highlights" id="highlights">
+      <section
+        class="highlights"
+        id="highlights"
+        aria-labelledby="highlights-heading"
+      >
         <div class="container">
           <div class="highlights-flex">
             <div class="highlights-text">
-              <h2>A few highlights from our menu</h2>
+              <h2 id="highlights-heading">A few highlights from our menu</h2>
               <p>
                 We cater for all dietary requirements, but here's a glimpse at
                 some of our diner's favourites. Our menu is revamped every
@@ -135,7 +139,11 @@
         </div>
       </section>
 
-      <section class="gathering" id="gathering">
+      <section
+        class="gathering"
+        id="gathering"
+        aria-label="Every type of gathering"
+      >
         <div class="container">
           <div class="gathering-flex">
             <div class="gathering-img">
@@ -164,10 +172,14 @@
         </div>
       </section>
 
-      <section class="reservation" id="reservation">
+      <section
+        class="reservation"
+        id="reservation"
+        aria-label="Make a reservation"
+      >
         <div class="container">
           <div class="reservation-flex">
-            <p>Ready to make a reservation?</p>
+            <strong>Ready to make a reservation?</strong>
             <a href="booking.html" class="btn">Book a table</a>
           </div>
         </div>
@@ -176,9 +188,11 @@
       <footer class="footer">
         <div class="container">
           <div class="footer-flex">
-            <svg class="logo" id="logo">
-              <use xlink:href="./assets/logo.svg#logo"></use>
-            </svg>
+            <a href="#">
+              <svg class="logo" id="logo">
+                <use xlink:href="./assets/logo.svg#logo"></use>
+              </svg>
+            </a>
             <div class="contact">
               <p>Marthwaite, Sedbergh Cumbria</p>
               <p>+00 44 123 4567</p>

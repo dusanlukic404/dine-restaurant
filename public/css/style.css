@@ -212,7 +212,7 @@ p:not(.reservation-flex p, .footer p) {
   transform: translateX(0);
 }
 
-.reservation-flex p {
+.reservation-flex strong {
   color: hsl(0deg, 0%, 100%);
   font-weight: 600;
   font-size: 3rem;
@@ -479,12 +479,11 @@ button .icon {
 
 .form-card {
   position: relative;
-  z-index: 10;
   background-color: hsl(0deg, 0%, 100%);
   padding: 3.125rem;
-  width: min(32.5rem, 100%);
+  width: min(33.75rem, 100%);
   box-shadow: 0 7.5rem 10rem -5rem hsla(219deg, 21%, 28%, 0.5);
-  transform: translateY(-100px);
+  transform: translateY(-70px);
   opacity: 0;
   animation: slide-down 1000ms ease-out forwards 500ms;
 }
@@ -493,10 +492,10 @@ button .icon {
   content: "";
   background-image: url("../../assets/patterns/pattern-lines.svg");
   background-repeat: no-repeat;
-  bottom: -6.875rem;
-  left: -4.375rem;
   width: 150px;
-  height: 150px;
+  height: 76px;
+  bottom: -2.4375rem;
+  left: -4.3125rem;
 }
 .form-card input {
   width: 100%;

@@ -134,7 +134,7 @@ p:not(.reservation-flex p, .footer p) {
   transform: translateX(0);
 }
 
-.reservation-flex p {
+.reservation-flex strong {
   color: $clr-neutral-100;
   font-weight: 600;
   font-size: rem(48);

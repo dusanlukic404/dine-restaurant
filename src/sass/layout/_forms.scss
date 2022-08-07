@@ -1,0 +1,75 @@
+@use "../abstract/" as *;
+
+.form-card {
+  $input-padding: rem(13);
+  position: relative;
+  background-color: $clr-neutral-100;
+  padding: rem(50);
+  width: min(rem(540), 100%);
+  box-shadow: $card-shadow;
+  transform: translateY(-70px);
+  opacity: 0;
+
+  animation: slide-down 1000ms ease-out forwards 500ms;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../assets/patterns/pattern-lines.svg");
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 76px;
+    bottom: rem(-39);
+    left: rem(-69);
+  }
+
+  input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba($clr-primary-900, 0.2);
+    cursor: pointer;
+    outline: none;
+
+    transition: $transition;
+
+    &:focus-visible {
+      border-bottom: 1px solid rgba($clr-primary-900, 1);
+    }
+
+    &#name,
+    &#email {
+      padding: 0 0 $input-padding $input-padding;
+    }
+  }
+
+  div + div,
+  button {
+    margin-top: rem(20);
+  }
+
+  .date-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .date-box {
+      display: flex;
+      gap: rem(20);
+      align-items: center;
+
+      input {
+        width: rem(80);
+        text-align: center;
+        padding-bottom: $input-padding;
+      }
+    }
+  }
+
+  .person-number-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $input-padding $input-padding $input-padding;
+    border-bottom: 1px solid $clr-primary-900;
+  }
+}
