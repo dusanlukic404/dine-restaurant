@@ -12,6 +12,13 @@
   }
 }
 
+@keyframes slide-left {
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes shake {
   10%,
   90% {

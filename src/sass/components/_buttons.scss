@@ -5,7 +5,7 @@
   text-decoration: none;
   text-transform: uppercase;
   padding: em(15) em(44);
-  font-size: rem(18);
+  font-size: clamp(rem(14), 3vw + 1rem, rem(18));
   letter-spacing: rem(2.5);
 
   border: 1px solid $clr-neutral-100;

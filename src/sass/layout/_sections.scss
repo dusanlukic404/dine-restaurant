@@ -15,11 +15,23 @@
 .logo {
   width: rem(103);
   height: rem(40);
+
+  @include breakpoint("large") {
+    width: rem(95);
+  }
+
+  @include breakpoint("medium") {
+    width: rem(90);
+  }
 }
 
 .hero-text,
 .booking-flex {
   margin-top: rem(140);
+
+  @include breakpoint("large") {
+    margin-top: rem(50);
+  }
 }
 
 .hero-text,
@@ -46,12 +58,46 @@
   background-size: cover;
   background-position: bottom;
 
+  @include breakpoint("large") {
+    background-image: url("../../assets/homepage/hero-bg-tablet@2x.jpg");
+    padding-top: rem(510);
+    background-position: top center;
+
+    min-height: 90vh;
+  }
+
+  @include breakpoint("medium") {
+    background-image: url("../../assets/homepage/hero-bg-tablet.jpg");
+    padding-top: rem(450);
+  }
+
+  @include breakpoint("small") {
+    background-image: url("../../assets/homepage/hero-bg-mobile.jpg");
+    padding-top: rem(300);
+  }
+
   &-container {
     $max-width: rem(1200);
     $padding: rem(25);
 
     width: min($max-width, 100% - ($padding * 2));
     margin-inline: auto;
+
+    @include breakpoint("large") {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.hero-text {
+  @include breakpoint("large") {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -63,6 +109,11 @@
   background-position-y: 17.2rem, bottom;
   background-position-x: left, right;
   background-repeat: no-repeat;
+
+  @include breakpoint("large") {
+    background-position-y: 7.2rem, bottom;
+    background-position-x: -40rem, right;
+  }
 }
 
 .reason {
@@ -73,6 +124,25 @@
   &__text {
     position: relative;
     max-width: rem(445);
+
+    @include breakpoint("large") {
+      margin-bottom: rem(100);
+    }
+
+    @include breakpoint("large") {
+      margin-bottom: rem(60);
+    }
+  }
+
+  @include breakpoint("large") {
+    flex-direction: column;
+    gap: rem(30);
+  }
+
+  &:nth-of-type(2) {
+    @include breakpoint("large") {
+      flex-direction: column-reverse;
+    }
   }
 }
 
@@ -87,6 +157,13 @@
 
   &-flex {
     display: flex;
+
+    @include breakpoint("large") {
+      flex-direction: column;
+      width: min(rem(650), 100%);
+      margin-inline: auto;
+      gap: rem(50);
+    }
 
     & > * {
       width: 100%;
@@ -103,9 +180,9 @@
 
       transition: $img-transition;
 
-      &.meal--active {
-        transform: translateX(0);
-        opacity: 1;
+      @include breakpoint("small") {
+        flex-direction: column;
+        gap: rem(20);
       }
 
       &-img {

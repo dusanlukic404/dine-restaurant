@@ -24,6 +24,11 @@
     &.slide-down {
       opacity: 1;
       transform: translateY(70px);
+
+      @include breakpoint("large") {
+        transform: translateY(-70px);
+        margin-top: rem(70);
+      }
     }
   }
 
@@ -37,8 +42,10 @@
       background-repeat: no-repeat;
       top: 50%;
       right: rem(-100);
-      width: 150px;
-      height: 150px;
+      width: rem(160);
+      height: rem(76);
+
+      transform: translateY(-50%);
     }
   }
 }

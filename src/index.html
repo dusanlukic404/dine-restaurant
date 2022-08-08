@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Dine Website - Homepage</title>
+    <title>Dine Restaurant - Homepage</title>
     <link rel="shortcut icon" href="./assets/favicon-32x32.png" />
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/script.js" type="module"></script>
@@ -38,10 +38,29 @@
         <div class="container">
           <div class="reason">
             <div class="reason__img">
-              <img
-                src="./assets/homepage/enjoyable-place-desktop.jpg"
-                alt="Enjoyable place"
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  srcset="./assets/homepage/enjoyable-place-desktop.jpg"
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="./assets/homepage/enjoyable-place-tablet@2x.jpg"
+                />
+                <source
+                  media="(min-width:425px)"
+                  srcset="./assets/homepage/enjoyable-place-tablet.jpg"
+                />
+                <source
+                  media="(min-width:235px)"
+                  srcset="./assets/homepage/enjoyable-place-mobile.jpg"
+                />
+
+                <img
+                  src="./assets/homepage/enjoyable-place-desktop.jpg"
+                  alt="Enjoyable place"
+                />
+              </picture>
             </div>
             <div class="reason__text">
               <h2>Enjoyable place for all the family</h2>
@@ -62,10 +81,29 @@
               </p>
             </div>
             <div class="reason__img">
-              <img
-                src="./assets/homepage/locally-sourced-desktop.jpg"
-                alt="The most locally sourced food"
-              />
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  srcset="./assets/homepage/locally-sourced-desktop.jpg"
+                />
+                <source
+                  media="(min-width:768px)"
+                  srcset="./assets/homepage/locally-sourced-tablet@2x.jpg"
+                />
+                <source
+                  media="(min-width:425px)"
+                  srcset="./assets/homepage/locally-sourced-tablet.jpg"
+                />
+                <source
+                  media="(min-width:235px)"
+                  srcset="./assets/homepage/locally-sourced-mobile.jpg"
+                />
+
+                <img
+                  src="./assets/homepage/locally-sourced-desktop.jpg"
+                  alt="Locally sourced food"
+                />
+              </picture>
             </div>
           </div>
         </div>
@@ -90,10 +128,24 @@
               <ul aria-label="List of best meals" role="list" class="meal-list">
                 <li class="meal">
                   <div class="meal-img">
-                    <img
-                      src="./assets/homepage/salmon-desktop-tablet@2x.jpg"
-                      alt="Salmon Fillet"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="./assets/homepage/salmon-desktop-tablet@2x.jpg"
+                      />
+                      <source
+                        media="(min-width: 355px)"
+                        srcset="./assets/homepage/salmon-mobile@2x.jpg"
+                      />
+                      <source
+                        media="(min-width: 275px)"
+                        srcset="./assets/homepage/salmon-mobile.jpg"
+                      />
+                      <img
+                        src="./assets/homepage/salmon-desktop-tablet@2x.jpg"
+                        alt="Salmon Fillet"
+                      />
+                    </picture>
                   </div>
                   <div class="meal-text">
                     <h3>Seared Salmon Fillet</h3>
@@ -105,10 +157,24 @@
                 </li>
                 <li class="meal">
                   <div class="meal-img">
-                    <img
-                      src="./assets/homepage/beef-desktop-tablet@2x.jpg"
-                      alt="Filet Mignon"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="./assets/homepage/beef-desktop-tablet@2x.jpg"
+                      />
+                      <source
+                        media="(min-width: 355px)"
+                        srcset="./assets/homepage/beef-mobile@2x.jpg"
+                      />
+                      <source
+                        media="(min-width: 275px)"
+                        srcset="./assets/homepage/beef-mobile.jpg"
+                      />
+                      <img
+                        src="./assets/homepage/beef-desktop-tablet@2x.jpg"
+                        alt="Filet Mignon"
+                      />
+                    </picture>
                   </div>
                   <div class="meal-text">
                     <h3>Rosemary Filet Mignon</h3>
@@ -120,10 +186,26 @@
                 </li>
                 <li class="meal">
                   <div class="meal-img">
-                    <img
-                      src="./assets/homepage/chocolate-desktop-tablet@2x.jpg"
-                      alt="Chocolate Mousse"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1200px)"
+                        srcset="
+                          ./assets/homepage/chocolate-desktop-tablet@2x.jpg
+                        "
+                      />
+                      <source
+                        media="(min-width: 355px)"
+                        srcset="./assets/homepage/chocolate-mobile@2x.jpg"
+                      />
+                      <source
+                        media="(min-width: 275px)"
+                        srcset="./assets/homepage/chocolate-mobile.jpg"
+                      />
+                      <img
+                        src="./assets/homepage/chocolate-desktop-tablet@2x.jpg"
+                        alt="Chocolate Mousse"
+                      />
+                    </picture>
                   </div>
                   <div class="meal-text">
                     <h3>Summer Fruit Chocolate Mousse</h3>

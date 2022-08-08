@@ -1,8 +1,10 @@
 @use "./functions" as *;
 
 $breakpoints-down: (
+  "large": em(1200),
   "medium": em(768),
-  "small": em(375),
+  "small": em(600),
+  "x-small": em(375),
 );
 
 @mixin breakpoint($size) {
