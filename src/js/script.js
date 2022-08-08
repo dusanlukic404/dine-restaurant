@@ -43,12 +43,17 @@ secondImageObserver.observe(secondImage);
 // Meals reveal
 
 const meals = document.querySelectorAll(".meal");
+const mealsList = document.querySelector(".meal-list");
 
 const revealMeal = function (entries, observer) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
 
-  entry.target.classList.add("meal--active");
+  meals.forEach((meal, i) => {
+    meal.style.animation = "slide-left 700ms ease-out forwards";
+    meal.style.animationDelay = `${i * 300}ms`;
+  });
+
   observer.unobserve(entry.target);
 };
 
@@ -58,7 +63,7 @@ const mealObserver = new IntersectionObserver(revealMeal, {
   threshold: 1,
 });
 
-meals.forEach((meal) => mealObserver.observe(meal));
+mealObserver.observe(mealsList);
 
 // Changing content of gathering section
 
