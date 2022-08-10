@@ -59,8 +59,7 @@ const revealMeal = function (entries, observer) {
 
 const mealObserver = new IntersectionObserver(revealMeal, {
   root: null,
-  rootMargin: "0px 0px -50px 0px",
-  threshold: 0.75,
+  threshold: 0.5,
 });
 
 mealObserver.observe(mealsList);
