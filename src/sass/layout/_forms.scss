@@ -33,6 +33,11 @@
     height: 76px;
     bottom: rem(-39);
     left: rem(-79);
+
+    @include breakpoint("small") {
+      bottom: rem(-66);
+      left: rem(-89);
+    }
   }
 
   input,

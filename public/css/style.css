@@ -757,6 +757,12 @@ button:focus-visible {
   bottom: -2.4375rem;
   left: -4.9375rem;
 }
+@media (max-width: 37.5em) {
+  .form-card::after {
+    bottom: -4.125rem;
+    left: -5.5625rem;
+  }
+}
 .form-card input,
 .form-card .select {
   width: 100%;
