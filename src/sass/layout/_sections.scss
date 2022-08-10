@@ -59,9 +59,8 @@
   background-position: bottom;
 
   @include breakpoint("large") {
-    background-image: url("../../assets/homepage/hero-bg-tablet@2x.jpg");
+    background-image: url("../../assets/homepage/hero-bg-tablet.jpg");
     background-position: top center;
-    min-height: 90vh;
 
     display: flex;
     justify-content: center;
