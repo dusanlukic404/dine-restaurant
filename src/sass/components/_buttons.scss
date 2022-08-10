@@ -60,6 +60,11 @@ button {
   height: rem(15);
 }
 
+a[data-type="inversed"] {
+  @extend %btn;
+  @extend %btn-inverse;
+}
+
 .btn-booking {
   @extend %btn;
   @extend %btn-inverse;

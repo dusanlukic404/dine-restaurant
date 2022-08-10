@@ -134,7 +134,7 @@ p:not(.meal p, .footer p) {
 }
 
 .form-card {
-  font-size: 1.5rem;
+  font-size: clamp(1.125rem, 3vw + 1rem, 1.5rem);
   line-height: 1.225;
   color: hsl(0deg, 0%, 7%);
 }
@@ -180,7 +180,6 @@ h2 {
   h2 {
     line-height: 1.1;
     text-align: center;
-    max-width: max-content;
   }
 }
 
@@ -245,11 +244,6 @@ p:not(.hero-text p, .reservation-flex p, .footer p) {
   font-size: 1.375rem;
   max-width: 445px;
 }
-@media (max-width: 75em) {
-  p:not(.hero-text p, .reservation-flex p, .footer p) {
-    max-width: max-content;
-  }
-}
 
 .meal p {
   font-size: clamp(0.875rem, 3vw + 1rem, 1.125rem);
@@ -258,6 +252,16 @@ p:not(.hero-text p, .reservation-flex p, .footer p) {
 
 .highlights {
   color: hsl(0deg, 0%, 100%);
+}
+
+@media (max-width: 75em) {
+  .highlights-text,
+.gathering-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .event {
@@ -276,12 +280,26 @@ p:not(.hero-text p, .reservation-flex p, .footer p) {
   background-repeat: no-repeat;
   top: 50%;
   left: -8.125rem;
-  transform: translateY(-50%);
   width: 100px;
   height: 1.5px;
   transform: translateX(30px);
   opacity: 0;
   transition: 300ms ease-in-out;
+}
+@media (max-width: 75em) {
+  .event::before {
+    width: 50%;
+    bottom: 0;
+    left: 50%;
+    top: unset;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 37.5em) {
+  .event-list {
+    text-align: center;
+  }
 }
 
 .event.event--active {
@@ -292,11 +310,22 @@ p:not(.hero-text p, .reservation-flex p, .footer p) {
   opacity: 1;
   transform: translateX(0);
 }
+@media (max-width: 75em) {
+  .event.event--active::before {
+    width: 50%;
+    transform: translateX(-50%);
+  }
+}
 
 .reservation-flex strong {
   color: hsl(0deg, 0%, 100%);
   font-weight: 600;
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
+}
+@media (max-width: 75em) {
+  .reservation-flex strong {
+    text-align: center;
+  }
 }
 
 footer {
@@ -312,7 +341,7 @@ footer {
   font-weight: 600;
 }
 
-.btn-booking, .btn {
+.btn-booking, a[data-type=inversed], .btn {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
@@ -324,19 +353,19 @@ footer {
   background-color: transparent;
   transition: 300ms ease-in-out;
 }
-.btn-booking:is(:hover, :focus-visible), .btn:is(:hover, :focus-visible) {
+.btn-booking:is(:hover, :focus-visible), a[data-type=inversed]:is(:hover, :focus-visible), .btn:is(:hover, :focus-visible) {
   background-color: hsl(0deg, 0%, 100%);
   color: hsl(234deg, 30%, 13%);
   border: 1px solid hsl(234deg, 30%, 13%);
   outline: none;
 }
 
-.btn-booking {
+.btn-booking, a[data-type=inversed] {
   border: 1px solid hsl(0deg, 0%, 7%);
   background-color: hsl(0deg, 0%, 7%);
   color: hsl(0deg, 0%, 100%);
 }
-.btn-booking:is(:hover, :focus-visible) {
+.btn-booking:is(:hover, :focus-visible), a[data-type=inversed]:is(:hover, :focus-visible) {
   background-color: transparent;
   color: hsl(0deg, 0%, 7%);
 }
@@ -466,21 +495,23 @@ button:focus-visible {
 @media (max-width: 75em) {
   .hero {
     background-image: url("../../assets/homepage/hero-bg-tablet@2x.jpg");
-    padding-top: 31.875rem;
     background-position: top center;
     min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 8.75rem;
   }
 }
 @media (max-width: 48em) {
   .hero {
     background-image: url("../../assets/homepage/hero-bg-tablet.jpg");
-    padding-top: 28.125rem;
+    padding-bottom: 15rem;
   }
 }
 @media (max-width: 37.5em) {
   .hero {
     background-image: url("../../assets/homepage/hero-bg-mobile.jpg");
-    padding-top: 18.75rem;
   }
 }
 .hero-container {
@@ -612,6 +643,13 @@ button:focus-visible {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 75em) {
+  .gathering-flex {
+    flex-direction: column;
+    justify-content: center;
+    gap: 4.375rem;
+  }
+}
 .gathering-flex .gathering-img {
   position: relative;
 }
@@ -628,6 +666,21 @@ button:focus-visible {
 .gathering .event-list {
   margin-top: 5rem;
 }
+@media (max-width: 75em) {
+  .gathering .event-list {
+    display: flex;
+    gap: 1.875rem;
+    margin-top: 2.5rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .gathering .event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    margin-top: 2.5rem;
+  }
+}
 
 .reservation {
   padding-block: 6.25rem;
@@ -639,6 +692,12 @@ button:focus-visible {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 75em) {
+  .reservation-flex {
+    flex-direction: column;
+    gap: 1.875rem;
+  }
 }
 .reservation-flex .btn {
   margin-top: 0;
@@ -653,6 +712,14 @@ button:focus-visible {
 .booking-flex {
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 75em) {
+  .booking-flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6.25rem;
+  }
 }
 
 .form-card {
@@ -703,21 +770,40 @@ button:focus-visible {
 .form-card button {
   margin-top: 1.25rem;
 }
-.form-card .date-time {
+.form-card .date {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.form-card .date-time .date-box {
+@media (max-width: 37.5em) {
+  .form-card .date {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.625rem;
+  }
+}
+.form-card .date .date-box {
   display: flex;
   gap: 1.25rem;
   align-items: center;
 }
-.form-card .date-time .date-box input,
-.form-card .date-time .date-box .select {
+@media (max-width: 37.5em) {
+  .form-card .date .date-box {
+    gap: 0;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+.form-card .date .date-box input,
+.form-card .date .date-box .select {
   width: 5rem;
   text-align: center;
+}
+.form-card .date .date-box input {
   padding-bottom: 0.8125rem;
+}
+.form-card .date .date-box .select {
+  padding-bottom: 0.875rem;
 }
 .form-card .select-dropdown {
   position: relative;
@@ -791,6 +877,15 @@ button:focus-visible {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 48em) {
+  .footer-flex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
+  }
+}
 
 .hero,
 .highlights,
@@ -803,4 +898,16 @@ button:focus-visible {
   height: 20rem;
   background-repeat: no-repeat;
   background-image: url("../../assets/patterns/pattern-curve-bottom-right.svg");
+}
+@media (max-width: 75em) {
+  .decoration {
+    height: 28.125rem;
+    background-size: contain;
+  }
+}
+@media (max-width: 37.5em) {
+  .decoration {
+    height: 34.375rem;
+    background-size: contain;
+  }
 }

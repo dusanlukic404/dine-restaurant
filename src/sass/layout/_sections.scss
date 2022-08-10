@@ -60,20 +60,22 @@
 
   @include breakpoint("large") {
     background-image: url("../../assets/homepage/hero-bg-tablet@2x.jpg");
-    padding-top: rem(510);
     background-position: top center;
-
     min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: rem(140);
   }
 
   @include breakpoint("medium") {
     background-image: url("../../assets/homepage/hero-bg-tablet.jpg");
-    padding-top: rem(450);
+    padding-bottom: rem(240);
   }
 
   @include breakpoint("small") {
     background-image: url("../../assets/homepage/hero-bg-mobile.jpg");
-    padding-top: rem(300);
   }
 
   &-container {
@@ -220,6 +222,12 @@
     justify-content: space-between;
     align-items: center;
 
+    @include breakpoint("large") {
+      flex-direction: column;
+      justify-content: center;
+      gap: rem(70);
+    }
+
     .gathering-img {
       position: relative;
 
@@ -238,6 +246,19 @@
 
   .event-list {
     margin-top: rem(80);
+
+    @include breakpoint("large") {
+      display: flex;
+      gap: rem(30);
+      margin-top: rem(40);
+    }
+
+    @include breakpoint("small") {
+      display: flex;
+      flex-direction: column;
+      gap: rem(10);
+      margin-top: rem(40);
+    }
   }
 }
 
@@ -253,6 +274,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include breakpoint("large") {
+    flex-direction: column;
+    gap: rem(30);
+  }
 
   .btn {
     margin-top: 0;
@@ -270,5 +296,12 @@
   &-flex {
     display: flex;
     justify-content: space-between;
+
+    @include breakpoint("large") {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: rem(100);
+    }
   }
 }

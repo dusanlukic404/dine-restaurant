@@ -26,7 +26,7 @@ p:not(.meal p, .footer p) {
 }
 
 .form-card {
-  font-size: rem(24);
+  font-size: clamp(rem(18), 3vw + 1rem, rem(24));
   line-height: 1.225;
   color: $clr-primary-900;
 
@@ -74,7 +74,6 @@ h2 {
   @include breakpoint("large") {
     line-height: 1.1;
     text-align: center;
-    max-width: max-content;
   }
 }
 
@@ -139,10 +138,6 @@ p {
 p:not(.hero-text p, .reservation-flex p, .footer p) {
   font-size: rem(22);
   max-width: 445px;
-
-  @include breakpoint("large") {
-    max-width: max-content;
-  }
 }
 
 .meal p {
@@ -152,6 +147,16 @@ p:not(.hero-text p, .reservation-flex p, .footer p) {
 
 .highlights {
   color: $clr-neutral-100;
+}
+
+.highlights-text,
+.gathering-text {
+  @include breakpoint("large") {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .event {
@@ -171,7 +176,6 @@ p:not(.hero-text p, .reservation-flex p, .footer p) {
     background-repeat: no-repeat;
     top: 50%;
     left: rem(-130);
-    transform: translateY(-50%);
     width: 100px;
     height: 1.5px;
 
@@ -179,6 +183,20 @@ p:not(.hero-text p, .reservation-flex p, .footer p) {
     opacity: 0;
 
     transition: $transition;
+
+    @include breakpoint("large") {
+      width: 50%;
+      bottom: 0;
+      left: 50%;
+      top: unset;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.event-list {
+  @include breakpoint("small") {
+    text-align: center;
   }
 }
 
@@ -189,12 +207,21 @@ p:not(.hero-text p, .reservation-flex p, .footer p) {
 .event.event--active::before {
   opacity: 1;
   transform: translateX(0);
+
+  @include breakpoint("large") {
+    width: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .reservation-flex strong {
   color: $clr-neutral-100;
   font-weight: 600;
-  font-size: rem(48);
+  font-size: clamp(rem(24), 4vw + 1rem, rem(48));
+
+  @include breakpoint("large") {
+    text-align: center;
+  }
 }
 
 footer {

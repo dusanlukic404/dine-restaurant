@@ -4,4 +4,14 @@
   height: rem(320);
   background-repeat: no-repeat;
   background-image: url("../../assets/patterns/pattern-curve-bottom-right.svg");
+
+  @include breakpoint("large") {
+    height: rem(450);
+    background-size: contain;
+  }
+
+  @include breakpoint("small") {
+    height: rem(550);
+    background-size: contain;
+  }
 }
