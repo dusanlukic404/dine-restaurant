@@ -1,7 +1,7 @@
 @use "../abstract/" as *;
 
 .form-card {
-  $input-padding: rem(13);
+  $input-padding: em(5);
   position: relative;
   background-color: $clr-neutral-100;
   padding: rem(50);
@@ -11,6 +11,18 @@
   opacity: 0;
 
   animation: slide-down 1000ms ease-out forwards 500ms;
+
+  @include breakpoint("large") {
+    padding: rem(45);
+  }
+
+  @include breakpoint("small") {
+    padding: rem(30);
+  }
+
+  @include breakpoint("x-small") {
+    padding: rem(20);
+  }
 
   &::after {
     position: absolute;
@@ -82,12 +94,9 @@
         text-align: center;
       }
 
-      input {
-        padding-bottom: $input-padding;
-      }
-
+      input,
       .select {
-        padding-bottom: rem(14);
+        padding-bottom: $input-padding;
       }
     }
   }

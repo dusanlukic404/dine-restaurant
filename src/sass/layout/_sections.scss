@@ -156,6 +156,10 @@
   justify-content: center;
   align-items: center;
 
+  @include breakpoint("large") {
+    padding-block: rem(150);
+  }
+
   &-flex {
     display: flex;
 
