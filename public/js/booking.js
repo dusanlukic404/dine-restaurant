@@ -87,7 +87,8 @@ function checkIputs(inputs) {
       monthInput.value > 12) &&
       monthInput.classList.add("input--error");
 
-    (dayInput.value < date.getDate() ||
+    ((monthInput.value == date.getMonth() + 1 &&
+      dayInput.value < date.getDate()) ||
       dayInput.value < 1 ||
       dayInput.value > 31) &&
       dayInput.classList.add("input--error");

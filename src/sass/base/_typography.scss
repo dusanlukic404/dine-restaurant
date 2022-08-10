@@ -55,11 +55,12 @@ p:not(.meal p, .footer p) {
 
 h1 {
   font-size: clamp(rem(40), 5vw + 1rem, rem(78));
-  width: min(13ch, 100%);
+  max-width: 13ch;
   line-height: 1;
 
   @include breakpoint("large") {
     text-align: center;
+    margin-inline: auto;
   }
 }
 
